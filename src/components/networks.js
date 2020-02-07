@@ -7,9 +7,10 @@ import {
 class Networks extends React.Component {
     render() {
         console.log("wtf", this.props.networks);
+        if (!this.props.networks) return null;
         return (
             <React.Fragment>
-                {if this.props.networks && this.props.networks.map((network, index) =>
+                {this.props.networks.map((network, index) =>
                     <div className="card" key={network.name + "-" + index}>
                         <div className="card-body">
                             <H5 className="card-title">{network.name}</H5>
