@@ -10,8 +10,6 @@ const theme = makeTheme({
     '$text-color': '#333',
     '$high-availability': '#388697',
     '$low-availability': '#CC2936',
-    '$grow': 'flex: 1',
-    '$main': 'overflow-y: auto',
 });
 
 export default theme;

@@ -1,45 +1,23 @@
-
 import React from "react";
-import {
-    H5,H6,P
-} from '@bootstrap-styled/v4';
 
 class Networks extends React.Component {
+    constructor(props) {
+        super(props);
+        console.log("props: ", this.props);
+        //console.log("new state: ",this.props.isFirstLoad);
+    }
+
     render() {
-        console.log("wtf", this.props.networks);
-        if (!this.props.networks) return null;
         return (
             <React.Fragment>
-                {this.props.networks.map((network, index) =>
-                    <div className="card" key={network.name + "-" + index}>
-                        <div className="card-body">
-                            <H5 className="card-title">{network.name}</H5>
-                            <H6 className="card-subtitle mb-2 text-muted">{network.href}</H6>
-                            <P className="card-text">{network.location.country}</P>
-                        </div>
+                <div className="card" {...this.props}>
+                    <div className="card-body">
+                        This is some text within a card body.
                     </div>
-                )}
+                </div>
             </React.Fragment>
         );
     }
 }
-//  const Networks = ({ networks = [] }) => {
-// //     console.log("here",networks);
-// //function Networks({networks}) {
-//     console.log("wtf", networks);
-//     return (
-//         <React.Fragment>
-//             {networks.map(network =>
-//                 <div className="card">
-//                     <div className="card-body">
-//                         <H5 className="card-title">{network.name}</H5>
-//                         <H6 className="card-subtitle mb-2 text-muted">{network.href}</H6>
-//                         <P className="card-text">{network.location.country}</P>
-//                     </div>
-//                 </div>
-//             )}
-//         </React.Fragment>
-//     );
-// };
 
 export default Networks;

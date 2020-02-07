@@ -2,15 +2,13 @@ import React, {Component} from 'react'
 // import {render} from 'react-dom';
 
 // import BootstrapProvider from '@bootstrap-styled/provider';
-import {BootstrapProvider} from "@bootstrap-styled/provider/dist/@bootstrap-styled/provider.esm";
-import {
-    Card,
-    P, H4
-} from '@bootstrap-styled/v4';
-import Networks from "./components/networks";
-import theme from "./theme/theme";
-import Axios from "axios";
+// import {BootstrapProvider} from "@bootstrap-styled/provider/dist/@bootstrap-styled/provider.esm";
+import Loading from "./images/loading.gif"
+import Countries from "./components/countries";
+// import theme from "./theme/theme";
+import axios from "axios";
 import utils from "./utils";
+import Networks from "./components/networks";
 
 class App extends Component {
     constructor(props) {
@@ -18,50 +16,49 @@ class App extends Component {
         this.state = {
             isLoading: true,
             networks: [],
-            bikes: []
+            countryData: [],
+            selectedCountry: null,
+            isFirstLoad: true,
         };
+        // this.handleMapClick = this.handleMapClick.bind(this);
+    };
+
+    componentDidMount() {
+        axios.get(utils.networks(), {})
+            .then(networks => {
+                this.setState({
+                    networks: networks.data.networks,
+                    isLoading: false
+                });
+            })
+            .catch(error => this.setState({error, isLoading: false}));
     }
 
-    componentDidMount = async () => {
-        const {data: networks} = await Axios.get(utils.networks());
-
-        // Axios.get(utils.networks(), {})
-        //     .then(networks => {
-                console.log("foo",networks);
-        this.setState({
-            networks: networks,
-            isLoading: false
-        });
-                  console.log(this.state);
-        //     })
-        //     .catch(error => this.setState({ error, isLoading: false }));
-    };
     render() {
-        //const { networks} = this.state;
-        return (
-            <BootstrapProvider theme={theme}>
+        if (this.state.isLoading) {
+            return (
+                <img className={"loading-img"} src={Loading} alt={"Loading..."}/>
+            )
+        } else {
+            return (
+                // <BootstrapProvider theme={theme}>
                 <div className="row grow w-100">
-                    <div className="col-12 bg-primary py-3">
-                        Country flag
+                    <div className="col-12 bg-primary py-3" id={"selectedFlag"}>
+                        {/*<SelectedCountryFlag/>*/}
                     </div>
-                    <div className="col-4 bg-info py-3">
-                        <Networks networks={this.state.networks} />
+                    <div className="col-1 bg-info text-center" id={"flags"}>
+                        <Countries networks={this.state.networks} onClick={this.handleMapClick}
+                                   isFirstLoad={this.state.isFirstLoad}/>
                     </div>
-                    <div className="main col-8 bg-warning h-100 py-3">
-                        <H4>Main</H4>
-                        <P className="mb-5">ipsumfoo</P>
-                        <Card/>
+                    <div className="main col-8 bg-warning h-100 py-3" id={"main"}>
+                        <Networks/>
                     </div>
                 </div>
-            </BootstrapProvider>
-
-        );
+                // </BootstrapProvider>
+            );
+        }
     }
 
-    // async getNetworks() {
-    //     // console.log("i am here", this.state);
-    //
-    // }
 }
 
 
