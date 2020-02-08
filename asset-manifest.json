@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/prontoforms/static/css/main.0e1d35a1.chunk.css",
+    "main.js": "/prontoforms/static/js/main.25561424.chunk.js",
+    "main.js.map": "/prontoforms/static/js/main.25561424.chunk.js.map",
+    "runtime-main.js": "/prontoforms/static/js/runtime-main.964fe771.js",
+    "runtime-main.js.map": "/prontoforms/static/js/runtime-main.964fe771.js.map",
+    "static/js/2.86d0ac4d.chunk.js": "/prontoforms/static/js/2.86d0ac4d.chunk.js",
+    "static/js/2.86d0ac4d.chunk.js.map": "/prontoforms/static/js/2.86d0ac4d.chunk.js.map",
+    "index.html": "/prontoforms/index.html",
+    "precache-manifest.b52694d8f2ea7098e0cac2141f65ad85.js": "/prontoforms/precache-manifest.b52694d8f2ea7098e0cac2141f65ad85.js",
+    "service-worker.js": "/prontoforms/service-worker.js",
+    "static/css/main.0e1d35a1.chunk.css.map": "/prontoforms/static/css/main.0e1d35a1.chunk.css.map",
+    "static/js/2.86d0ac4d.chunk.js.LICENSE.txt": "/prontoforms/static/js/2.86d0ac4d.chunk.js.LICENSE.txt",
+    "static/media/loading.gif": "/prontoforms/static/media/loading.d377e76e.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.964fe771.js",
+    "static/js/2.86d0ac4d.chunk.js",
+    "static/css/main.0e1d35a1.chunk.css",
+    "static/js/main.25561424.chunk.js"
+  ]
+}
