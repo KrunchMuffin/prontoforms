@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/prontoforms/static/css/main.b209d429.chunk.css",
-    "main.js": "/prontoforms/static/js/main.f2534b8a.chunk.js",
-    "main.js.map": "/prontoforms/static/js/main.f2534b8a.chunk.js.map",
+    "main.js": "/prontoforms/static/js/main.a18ff64e.chunk.js",
+    "main.js.map": "/prontoforms/static/js/main.a18ff64e.chunk.js.map",
     "runtime-main.js": "/prontoforms/static/js/runtime-main.964fe771.js",
     "runtime-main.js.map": "/prontoforms/static/js/runtime-main.964fe771.js.map",
-    "static/js/2.9c3c1032.chunk.js": "/prontoforms/static/js/2.9c3c1032.chunk.js",
-    "static/js/2.9c3c1032.chunk.js.map": "/prontoforms/static/js/2.9c3c1032.chunk.js.map",
+    "static/js/2.6351eaeb.chunk.js": "/prontoforms/static/js/2.6351eaeb.chunk.js",
+    "static/js/2.6351eaeb.chunk.js.map": "/prontoforms/static/js/2.6351eaeb.chunk.js.map",
     "index.html": "/prontoforms/index.html",
-    "precache-manifest.5b5ff80f9e8b6a914389004dcd9564f7.js": "/prontoforms/precache-manifest.5b5ff80f9e8b6a914389004dcd9564f7.js",
+    "precache-manifest.e5abd1e27df337d22dac76970abc8448.js": "/prontoforms/precache-manifest.e5abd1e27df337d22dac76970abc8448.js",
     "service-worker.js": "/prontoforms/service-worker.js",
     "static/css/main.b209d429.chunk.css.map": "/prontoforms/static/css/main.b209d429.chunk.css.map",
-    "static/js/2.9c3c1032.chunk.js.LICENSE.txt": "/prontoforms/static/js/2.9c3c1032.chunk.js.LICENSE.txt",
+    "static/js/2.6351eaeb.chunk.js.LICENSE.txt": "/prontoforms/static/js/2.6351eaeb.chunk.js.LICENSE.txt",
     "static/media/loading.gif": "/prontoforms/static/media/loading.d377e76e.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.964fe771.js",
-    "static/js/2.9c3c1032.chunk.js",
+    "static/js/2.6351eaeb.chunk.js",
     "static/css/main.b209d429.chunk.css",
-    "static/js/main.f2534b8a.chunk.js"
+    "static/js/main.a18ff64e.chunk.js"
   ]
 }
