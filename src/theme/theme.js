@@ -1,6 +1,5 @@
-import {makeTheme} from "bootstrap-styled";
-
-const theme = makeTheme({
+const theme = {
+    colors: {
     '$light-bg': '#FFF',
     '$dark-bg': '#E7E7E7',
     '$header': '#0076A8',
@@ -10,7 +9,8 @@ const theme = makeTheme({
     '$text-color': '#333',
     '$high-availability': '#388697',
     '$low-availability': '#CC2936',
-});
+    }
+};
 
 export default theme;
 

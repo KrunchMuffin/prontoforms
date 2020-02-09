@@ -4,6 +4,7 @@ import React from "react";
 // import Thumb from "./Thumbs";
 
 const availabilities = (props) => {
+    /** @namespace place.network.company **/
     return (
         <React.Fragment>
             {props.firstLoad && "Please select a Country from the left."}
@@ -16,13 +17,13 @@ const availabilities = (props) => {
                     }), {free_bikes: 0, empty_slots: 0});
                 const percentage = Math.round(stationStats.free_bikes / (stationStats.free_bikes + stationStats.empty_slots) * 100) || 0;
                 return (
-                    <div className="card" key={index}>
+                    <div className="card mb-3 shadow" key={index}>
                         <div className="card-body">
                             <h1 className={"display-4 text-center"}>{place.network.location.city ? place.network.location.city : "N/A"}</h1>
                             <p className={"text-center"}>
                                 Availability:&nbsp;
                                 {/*<Thumb percent={percentage}/>*/}
-                                <span className={`h3 pl-3 ${percentage === 0 ? " text-danger" : ""}`}>
+                                <span className={`h3 pl-3 ${percentage === 0 ? "LowAvail" : "HighAvail"}`}>
                                     {percentage}%
                                 </span>
                             </p>

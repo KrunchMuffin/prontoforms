@@ -6,6 +6,9 @@ import utils from "./utils";
 import Availabilities from "./components/availabilities";
 import SelectedCountryFlag from "./components/SelectedCountryFlag";
 import Spinner from "./components/common/spinner";
+import {ThemeProvider} from "styled-components";
+import theme from "../src/theme/theme";
+
 
 class App extends Component {
     constructor(props) {
@@ -13,7 +16,7 @@ class App extends Component {
         this.state = {
             isLoading: false,
             networks: [],
-            selectedCountry: null,
+            selectedCountry: '',
             isFirstLoad: true,
             countryNetworks: [],
         };
@@ -69,9 +72,6 @@ class App extends Component {
     }
 
     componentDidMount() {
-        // this.setState({
-        //     isLoading: true
-        // });
         this.fetchNetworks();
     }
 
@@ -90,6 +90,7 @@ class App extends Component {
 
     render() {
         const loading = this.state.isLoading;
+
         if (loading) {
             return (
                 <React.Fragment>
@@ -98,25 +99,31 @@ class App extends Component {
             )
         } else {
             return (
-                <React.Fragment>
-                    <GlobalStyle/>
+                <ThemeProvider theme={theme}>
+                    <React.Fragment>
+                        <GlobalStyle/>
 
-                    <div className="row">
-                        <div className="col-12 bg-primary m-0 p-0" id={"selectedFlag"}>
-                            {
-                                this.state.selectedCountry ?
-                                    <SelectedCountryFlag flag={this.state.selectedCountry}/> : ''
-                            }
+                        <div className="row">
+                            <div className="col-12 m-0 p-0 headerBg sticky-top">
+                                <React.Fragment>
+                                    {
+                                        this.state.selectedCountry ?
+                                            <SelectedCountryFlag flag={this.state.selectedCountry}/> : ''
+                                    }
+                                </React.Fragment>
+                            </div>
+                            <div className="col-1 text-center sideBarBkg" id="flags">
+                                <Countries networks={this.state.networks}
+                                           mapClick={this.handleMapClick}
+                                            selected={this.state.selectedCountry}/>
+                            </div>
+                            <div className="main col-8 h-100 py-3 mainBkg mx-auto" id="main">
+                                <Availabilities cnetworks={this.state.countryNetworks}
+                                                firstLoad={this.state.isFirstLoad}/>
+                            </div>
                         </div>
-                        <div className="col-1 text-center" id={"flags"}>
-                            <Countries networks={this.state.networks}
-                                       mapClick={this.handleMapClick}/>
-                        </div>
-                        <div className="main col-8 bg-warning h-100 py-3" id={"main"}>
-                            <Availabilities cnetworks={this.state.countryNetworks} firstLoad={this.state.isFirstLoad}/>
-                        </div>
-                    </div>
-                </React.Fragment>
+                    </React.Fragment>
+                </ThemeProvider>
             );
         }
     }

@@ -7,13 +7,13 @@ const Countries = (props) => {
     // distinct countries
     const distinctCountries = [...new Set(westOf50.map(c => c.location.country))];
     distinctCountries.sort();
-
+console.log(props);
     return (
         <React.Fragment>
             {distinctCountries.map((country, index) =>
-                <div key={country + "-" + index}>
+                <div tabIndex={index} key={country + "-" + index} className={`pointer${props.selected.toUpperCase() === country ? " selectedFlag" : ""}`}>
                     <img src={"https://www.countryflags.io/" + country.toLowerCase() + "/shiny/64.png"}
-                         alt={"Country Flag " + country} className={"img pointer flag"}
+                         alt={"Country Flag " + country} className="img pointer flag"
                          onClick={() => props.mapClick(country.toLowerCase())}/>
                 </div>
             )}
