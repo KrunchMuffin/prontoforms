@@ -1,4 +1,8 @@
-const networks=()=> {return 'https://api.citybik.es/v2/networks'};
-const stations=(id)=>{return 'http://api.citybik.es/v2/networks/' + id};
+const networks = () => {
+    return 'https://api.citybik.es/v2/networks'
+};
+const stations = (id) => {
+    return 'http://api.citybik.es/v2/networks/' + id
+};
 
-export default { networks , stations};
+export default {networks, stations};

@@ -19,3 +19,23 @@ body {
 .pointer {
   cursor: pointer;
 }
+.selected-flag-container {
+  text-align: center;
+}
+
+.flag {
+  border-bottom: 1px solid #878796;
+  margin-left: 3px;
+}
+
+.no-gutter > [class*='col-'] {
+  padding-right:0;
+  padding-left:0;
+}
+.thumb {
+  width: 25px;
+  height: 25px;
+}
+.thumb:after{
+  content: "\00a0";
+}
