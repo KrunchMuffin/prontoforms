@@ -1,24 +1,22 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.loading-img {
-  height: 250px;
-  left: 50%;
-  margin-top: -125px;
-  margin-left: -125px;
-  position: absolute;
-  top: 50%;
-  width: 250px;
+.pace-running > :not(.pace) {
+  opacity: 0;
 }
 
-.pointer {
-  cursor: pointer;
+.pace-done > :not(.pace) {
+  opacity: 1;
+  transition: opacity .5s ease;
 }
+/*.loading-img {*/
+/*  height: 250px;*/
+/*  left: 50%;*/
+/*  margin-top: -125px;*/
+/*  margin-left: -125px;*/
+/*  position: absolute;*/
+/*  top: 50%;*/
+/*  width: 250px;*/
+/*}*/
+
+
 .selected-flag-container {
   text-align: center;
 }
@@ -31,11 +29,4 @@ body {
 .no-gutter > [class*='col-'] {
   padding-right:0;
   padding-left:0;
-}
-.thumb {
-  width: 25px;
-  height: 25px;
-}
-.thumb:after{
-  content: "\00a0";
 }

@@ -1,6 +1,7 @@
 import React from "react";
-import thumbDown from "../images/thumbs-down-sign_1f44e.png"
-import thumbUp from "../images/thumbs-up-sign_1f44d.png";
+// import thumbDown from "../images/thumbs-down-sign_1f44e.png"
+// import thumbUp from "../images/thumbs-up-sign_1f44d.png";
+// import Thumb from "./Thumbs";
 
 const availabilities = (props) => {
     return (
@@ -17,12 +18,11 @@ const availabilities = (props) => {
                 return (
                     <div className="card" key={index}>
                         <div className="card-body">
-                            <h1 className={"display-4 text-center"}>{place.network.location.city}</h1>
+                            <h1 className={"display-4 text-center"}>{place.network.location.city ? place.network.location.city : "N/A"}</h1>
                             <p className={"text-center"}>
                                 Availability:&nbsp;
-                                <img className={"thumb"} src={percentage > 25 ? thumbUp : thumbDown}
-                                     alt={"availability"}/>
-                                <span className="h3 pl-3" {...percentage > 25 ? thumbUp : thumbDown}>
+                                {/*<Thumb percent={percentage}/>*/}
+                                <span className={`h3 pl-3 ${percentage === 0 ? " text-danger" : ""}`}>
                                     {percentage}%
                                 </span>
                             </p>
@@ -30,7 +30,7 @@ const availabilities = (props) => {
                                 <p><u>Companies:</u> {stationStats.free_bikes} bikes
                                     / {stationStats.free_bikes + stationStats.empty_slots} spots</p>
                                 <p>{place.network.company.join("*").split("*").map(line =>
-                                    <span>{line},<br/></span>)}</p>
+                                    <span key={line.replace(/[^\w\s]/gi, '')}>{line}<br/></span>)}</p>
                             </div>
                         </div>
                     </div>
