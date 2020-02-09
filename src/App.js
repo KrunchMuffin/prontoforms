@@ -36,7 +36,6 @@ class App extends Component {
             // console.log("plid: ", placeList[i].id);
             if (placeList[i]) {
                 let url = utils.stations(placeList[i].id);
-                console.log("url: ", url);
                 PromiseArr.push(
                     axios.get(url)
                         .then(result => new Promise(resolve => resolve(result.data)))

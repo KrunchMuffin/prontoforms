@@ -22,7 +22,7 @@ const availabilities = (props) => {
                                 Availability:&nbsp;
                                 <img className={"thumb"} src={percentage > 25 ? thumbUp : thumbDown}
                                      alt={"availability"}/>
-                                <span className="h3 pl-3">
+                                <span className="h3 pl-3" {...percentage > 25 ? thumbUp : thumbDown}>
                                     {percentage}%
                                 </span>
                             </p>
