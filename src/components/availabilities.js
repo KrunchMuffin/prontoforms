@@ -1,8 +1,5 @@
 import React from "react";
-
-// import thumbDown from "../images/thumbs-down-sign_1f44e.png"
-// import thumbUp from "../images/thumbs-up-sign_1f44d.png";
-// import Thumb from "./Thumbs";
+import Thumb from "./Thumbs";
 
 const availabilities = (props) => {
     /** @namespace place.network.company **/
@@ -26,7 +23,7 @@ const availabilities = (props) => {
                             <h1 className={"display-4 text-center"}>{place.network.location.city}</h1>
                             <p className={"text-center"}>
                                 Availability:&nbsp;
-                                {/*<Thumb percent={percentage}/>*/}
+                                <Thumb percent={percentage}/>
                                 <span className={`h3 pl-3 ${percentage === 0 ? "LowAvail" : "HighAvail"}`}>
                                     {percentage}%
                                 </span>

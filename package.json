@@ -1,6 +1,6 @@
 {
   "homepage": "https://krunchmuffin.github.io/prontoforms",
-  "name": "prontoforms",
+  "name": "bikechecker",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
@@ -18,7 +18,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build"
+    "ghpdeploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,9 +36,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^2.2.0",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2"
+    "gh-pages": "^2.2.0"
   }
 }
