@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "48d2b8391204d572c764594f912a69e1",
+    "revision": "a81f8261310725ec8875db11cd8dabd7",
     "url": "/prontoforms/index.html"
   },
   {
-    "revision": "543bab36be70f7a63185",
-    "url": "/prontoforms/static/css/main.5476ad1a.chunk.css"
+    "revision": "5baeeebe752e5e1dd418",
+    "url": "/prontoforms/static/css/main.29b6ae23.chunk.css"
   },
   {
     "revision": "ad858e7ecca0d73841c4",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/prontoforms/static/js/2.75cc7438.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "543bab36be70f7a63185",
-    "url": "/prontoforms/static/js/main.a5f342d4.chunk.js"
+    "revision": "5baeeebe752e5e1dd418",
+    "url": "/prontoforms/static/js/main.1a1441f3.chunk.js"
   },
   {
     "revision": "23cf96a8c434cd295117",

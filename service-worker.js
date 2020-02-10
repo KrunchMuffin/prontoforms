@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/prontoforms/precache-manifest.6d948347526e0a1108af6760661609e2.js"
+  "/prontoforms/precache-manifest.55726920198d4d416dfe460d6703e2b4.js"
 );
 
 self.addEventListener('message', (event) => {
