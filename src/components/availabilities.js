@@ -1,15 +1,19 @@
 import React from "react";
+
 // import thumbDown from "../images/thumbs-down-sign_1f44e.png"
 // import thumbUp from "../images/thumbs-up-sign_1f44d.png";
 // import Thumb from "./Thumbs";
 
 const availabilities = (props) => {
     /** @namespace place.network.company **/
+    // console.log(JSON.stringify(props.cnetworks, null, 2));
     return (
         <React.Fragment>
             {props.firstLoad && "Please select a Country from the left."}
 
             {props.cnetworks && props.cnetworks.map((place, index) => {
+                // the return is flaky sometimes and location may not exist for larger payloads
+                if (!place.network.location) return null;
                 const stationStats = place.network.stations
                     .reduce((stats, {free_bikes, empty_slots}) => ({
                         free_bikes: stats.free_bikes + (free_bikes || 0),
@@ -19,7 +23,7 @@ const availabilities = (props) => {
                 return (
                     <div className="card mb-3 shadow" key={index}>
                         <div className="card-body">
-                            <h1 className={"display-4 text-center"}>{place.network.location.city ? place.network.location.city : "N/A"}</h1>
+                            <h1 className={"display-4 text-center"}>{place.network.location.city}</h1>
                             <p className={"text-center"}>
                                 Availability:&nbsp;
                                 {/*<Thumb percent={percentage}/>*/}

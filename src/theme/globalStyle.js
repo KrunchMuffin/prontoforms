@@ -40,5 +40,18 @@ const GlobalStyle = createGlobalStyle`
   div:focus, .selectedFlag {
     background-color: #f26522;
   }  
+  .selected-flag-container {
+    text-align: center;
+  }
+
+  .flag {
+    border-bottom: 1px solid #878796;
+    margin-left: 3px;
+  }
+
+  .no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+  }  
 `;
 export default GlobalStyle;

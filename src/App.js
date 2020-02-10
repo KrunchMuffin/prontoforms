@@ -29,7 +29,7 @@ class App extends Component {
             isFirstLoad: false,
             isLoading: true,
         });
-        this.fetchStations();
+        // this.fetchStations();
         // filter out by selected country and then sort by city name
         const placeList = this.state.networks.filter(i => i.location.country === country.toUpperCase())
             .sort((a, b) => a.location.city.localeCompare(b.location.city));
@@ -38,12 +38,15 @@ class App extends Component {
         const PromiseArr = [];
         for (let i = 0; i < placeList.length; i++) {
             // make sure they have an ID
-            // console.log("plid: ", placeList[i].id);
-            if (placeList[i]) {
+            if (placeList[i].id) {
                 let url = utils.stations(placeList[i].id);
                 PromiseArr.push(
                     axios.get(url)
                         .then(result => new Promise(resolve => resolve(result.data)))
+                        .catch(error =>
+                            this.setState({
+                            error, isLoading: false
+                        }))
                 );
             }
         }
@@ -115,7 +118,7 @@ class App extends Component {
                             <div className="col-1 text-center sideBarBkg" id="flags">
                                 <Countries networks={this.state.networks}
                                            mapClick={this.handleMapClick}
-                                            selected={this.state.selectedCountry}/>
+                                           selected={this.state.selectedCountry}/>
                             </div>
                             <div className="main col-8 h-100 py-3 mainBkg mx-auto" id="main">
                                 <Availabilities cnetworks={this.state.countryNetworks}
