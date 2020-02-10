@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/prontoforms/static/css/main.5476ad1a.chunk.css",
+    "main.js": "/prontoforms/static/js/main.a5f342d4.chunk.js",
+    "main.js.map": "/prontoforms/static/js/main.a5f342d4.chunk.js.map",
+    "runtime-main.js": "/prontoforms/static/js/runtime-main.964fe771.js",
+    "runtime-main.js.map": "/prontoforms/static/js/runtime-main.964fe771.js.map",
+    "static/js/2.75cc7438.chunk.js": "/prontoforms/static/js/2.75cc7438.chunk.js",
+    "static/js/2.75cc7438.chunk.js.map": "/prontoforms/static/js/2.75cc7438.chunk.js.map",
+    "index.html": "/prontoforms/index.html",
+    "precache-manifest.6d948347526e0a1108af6760661609e2.js": "/prontoforms/precache-manifest.6d948347526e0a1108af6760661609e2.js",
+    "service-worker.js": "/prontoforms/service-worker.js",
+    "static/css/main.5476ad1a.chunk.css.map": "/prontoforms/static/css/main.5476ad1a.chunk.css.map",
+    "static/js/2.75cc7438.chunk.js.LICENSE.txt": "/prontoforms/static/js/2.75cc7438.chunk.js.LICENSE.txt",
+    "static/media/DoubleRing-1s-610px.gif": "/prontoforms/static/media/DoubleRing-1s-610px.992b605e.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.964fe771.js",
+    "static/js/2.75cc7438.chunk.js",
+    "static/css/main.5476ad1a.chunk.css",
+    "static/js/main.a5f342d4.chunk.js"
+  ]
+}
